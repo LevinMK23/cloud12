@@ -15,19 +15,19 @@ public class Lambda {
     }
 
     public static void main(String[] args) {
-        Consumer<String> consumer = System.out::println;
-        List.of(1, 2, 3).forEach(((Consumer<Integer>) i -> {
-            System.out.print(i * 2 + " ");
-        }).andThen(i -> {
-            System.out.println(i + 1);
-        }));
-        Predicate<Integer> predicate = (x -> x % 2 == 0);
-        Function<String, Integer> foo = String::length;
-        System.out.println(
-                foo.andThen(x -> x * 2)
-                        .andThen(x -> x + 1)
-                        .apply("12314"));
-        Supplier<ArrayList<Integer>> supplier = ArrayList::new;
+//        Consumer<String> consumer = System.out::println;
+//        List.of(1, 2, 3).forEach(((Consumer<Integer>) i -> {
+//            System.out.print(i * 2 + " ");
+//        }).andThen(i -> {
+//            System.out.println(i + 1);
+//        }));
+//        Predicate<Integer> predicate = (x -> x % 2 == 0);
+//        Function<String, Integer> foo = String::length;
+//        System.out.println(
+//                foo.andThen(x -> x * 2)
+//                        .andThen(x -> x + 1)
+//                        .apply("12314"));
+//        Supplier<ArrayList<Integer>> supplier = ArrayList::new;
 
         // System.out.println(foo.apply("123"));
         //consumer.andThen(System.out::println).accept("Hello");
